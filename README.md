@@ -124,3 +124,7 @@ python main_pipeline.py --input data/test_input.json --output result/output.json
 3. **业务数据**：系统从data/database目录中的Excel文件读取业务数据，包括OMS.xlsx（订单管理）、TMS.xlsx（运输管理）和WMS.xlsx（仓库管理）。
 4. **多轮对话**：系统支持多轮对话，会自动存储和加载用户的对话历史和结构化信息。
 5. **评估**：使用黄金测试集评估系统性能，计算hit@k和recall指标。
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/image?repos=lujiaju6555/logistics-assistant-agent&type=date&legend=top-left)](https://www.star-history.com/?repos=lujiaju6555%2Flogistics-assistant-agent&type=date&legend=top-left)
