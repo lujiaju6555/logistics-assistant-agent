@@ -103,9 +103,9 @@ python main_pipeline.py --input data/test_input.json --output result/output.json
 ### 4. 评估结果
 - **运行评估**：使用 `evaluate.py` 评估系统性能
   ```bash
-  python evaluate.py --result-file result/output.json
+  python evaluate.py --input-file data/input.json --result-file result/output.json
   ```
-- **评估指标**：hit@k、recall
+- **评估指标**：recall、hit@k
 
 ## 技术栈
 
@@ -124,6 +124,13 @@ python main_pipeline.py --input data/test_input.json --output result/output.json
 3. **业务数据**：系统从data/database目录中的Excel文件读取业务数据，包括OMS.xlsx（订单管理）、TMS.xlsx（运输管理）和WMS.xlsx（仓库管理）。
 4. **多轮对话**：系统支持多轮对话，会自动存储和加载用户的对话历史和结构化信息。
 5. **评估**：使用黄金测试集评估系统性能，计算hit@k和recall指标。
+
+## 后续改进
+
+ - 数据生成的方式有待改进
+ - 真值打标应使用大模型对问题和知识库中每个文档进行匹配判断，以完整地判断
+ - 文本切片方式可以改变切片大小生成不同颗粒度的切片，从而增加检索能力，同时可以修改为父子检索方式
+ - 探索更强的重排序模型（Qwen-Reranker）
 
 ## Star History
 
